@@ -1,12 +1,17 @@
 public class CafeteriaNegrito {
     public static void main(String[] args) {
 
-        System.out.println("BIENVENIDOS A CAFETERIA NEGRITO");
+        System.out.println("=======BIENVENIDOS A CAFETERIA NEGRITO=======");
         System.out.println();
+
         Cafe orden1 = new Expreso();
+        orden1.setTamano(Tamano.GRANDE);
+        orden1 = new Leche(orden1);
+        orden1 = new Moca(orden1);
         imprimirOrden(orden1);
 
-        Cafe orden2 = new Expreso();
+        Cafe orden2 = new TostadoNegro();
+        orden2.setTamano(Tamano.MEDIANO);
         orden2 = new Moca(orden2);
         orden2 = new Crema(orden2);
         imprimirOrden(orden2);
@@ -19,6 +24,7 @@ public class CafeteriaNegrito {
         imprimirOrden(orden3);
 
         Cafe orden4 = new Descafeinado();
+        orden4.setTamano(Tamano.GRANDE);
         orden4 = new Leche(orden4);
         orden4 = new Moca(orden4);
         orden4 = new Crema(orden4);
