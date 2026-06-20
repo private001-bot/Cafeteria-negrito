@@ -1,0 +1,2 @@
+interface Complemento extends Cafe {
+}
